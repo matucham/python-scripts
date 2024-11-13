@@ -1,3 +1,22 @@
+"""
+Output after use of script:
+Authentication response: Password:
+
+[...]
+
+Authentication failed.
+Password not found in given list
+Authentication response: Password:
+
+Authentication failed.
+Authentication response: Welcome Admin!!! Type "shell" to begin
+
+Password is:  abc123
+Password found
+
+"""
+
+
 import socket
 
 def connect_and_authenticate(ip, port, passwordlist):
